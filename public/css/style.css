@@ -1,0 +1,293 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-left: 20px;
+}
+
+.container{
+    flex: 1;
+    margin-top: 0;
+}
+
+/* Navbar */
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+/* Smooth transition for navbar collapse */
+.collapse {
+  transition: height 0.5s ease; /* Adds smooth slide-down effect */
+}
+
+.navbar-collapse {
+  backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+  transition: backdrop-filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+
+
+/* Hamburger icon (default) */
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* When the icon is clicked and menu is open (cross icon) */
+.navbar-toggler.active .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    margin-right: 1rem ;
+    font-size: 1.2rem;
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+    height: 8rem;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* Card Effect */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New template */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show image */
+
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Map */
+#map { 
+    height: 300px;
+    width: 80vh;
+}
+
+
+/* navbar search-btn */
+.search-btn {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .search-btn i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-inp{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+  }
+
+
+  /* Filters icons */
+
+  #filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    opacity: 0.7;
+  }
+  .filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.08); 
+  }
+  .filter p{
+    font-size: 0.8rem;
+  }
+  .tax-info{
+    display:none;
+  }
+  .tax-toggle {
+    border: 1px solid black !important;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* .. */
+  #filters .filter a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from its parent */
+    display: block; /* Ensures the anchor takes up full width/height of the div */
+  }
+
+  #filters .filter:hover {
+    cursor: pointer;
+  }
+
+  #filters .filter i, #filters .filter p {
+    color: #000; 
+  }
+
+  
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  #filters{
+    display: none;
+  }
+
+  .search-form {
+    width: 100%; 
+  }
+
+  .search-inp {
+    width: 70%; 
+    margin-right: 5px;
+  }
+
+  .search-btn {
+    padding: 0.5rem 1rem;
+    width: 30%;
+  }
+  .filter a {
+    color: inherit; /* Makes sure the link inherits the color from its parent */
+    text-decoration: none; /* Removes underline */
+  }
+
+  #map { 
+    height: 300px;
+    width: 20vh;
+  }
+}
+
+@media (min-width: 1491px) {
+  #map { 
+    height: 300px;
+    width: 50vh;
+  }
+}
