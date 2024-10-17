@@ -4,7 +4,11 @@ User can give reviews on other destinations, has a map for location of destinati
 Technologies used:
 
 Frontend: HTML, CSS, Bootstrap
+
 Backend: Node.js, Express
+
 Database: MongoDB, MongoDB Atlas
+
 Deployment: Render.com
+
 Version Control: Git, GitHub
